@@ -4,8 +4,8 @@ import com.example.orm.jpa.AbstractEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Collections;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "copsboot_user")
@@ -22,6 +22,7 @@ public class User extends AbstractEntity<UserId> {
     protected User(){
 
     }
+
     public User(UserId id, String email, String password, Set<UserRole> roles){
         super(id);
         this.email = email;
@@ -39,5 +40,13 @@ public class User extends AbstractEntity<UserId> {
 
     public Set<UserRole> getRoles() {
         return roles;
+    }
+
+    public static User createCaptain(UserId userId, String email, String password) {
+        return new User(userId, email, password, Collections.singleton(UserRole.CAPTAIN));
+    }
+
+    public static User createOfficer(UserId userId, String email, String password) {
+        return new User(userId, email, password, Collections.singleton(UserRole.OFFICER));
     }
 }

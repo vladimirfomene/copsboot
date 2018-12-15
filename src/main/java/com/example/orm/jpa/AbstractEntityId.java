@@ -32,6 +32,7 @@ public abstract class AbstractEntityId<T extends Serializable> implements Serial
     public String asString() {
         return id.toString();
     }
+
     @Override
     public boolean equals(Object o) {
         boolean result = false;
@@ -43,10 +44,12 @@ public abstract class AbstractEntityId<T extends Serializable> implements Serial
         }
         return result;
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
     @Override
     public String toString() {
         return toStringHelper(this)
