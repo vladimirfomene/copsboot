@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 401 Unauthorized
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+WWW-Authenticate: Bearer realm="copsboot-service", error="unauthorized", error_description="Full authentication is required to access this resource"
+Content-Length: 113
+
+{
+  "error" : "unauthorized",
+  "error_description" : "Full authentication is required to access this resource"
+}
+----

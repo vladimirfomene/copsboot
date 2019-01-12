@@ -1,0 +1,8 @@
+[source,options="nowrap"]
+----
+{
+  "id" : "91981e43-6980-447a-9050-01675c9fc021",
+  "email" : "wim.deblauwe@example.com",
+  "roles" : [ "OFFICER" ]
+}
+----

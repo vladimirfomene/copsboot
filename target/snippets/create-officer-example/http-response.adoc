@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+Content-Length: 118
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+
+{
+  "id" : "91981e43-6980-447a-9050-01675c9fc021",
+  "email" : "wim.deblauwe@example.com",
+  "roles" : [ "OFFICER" ]
+}
+----

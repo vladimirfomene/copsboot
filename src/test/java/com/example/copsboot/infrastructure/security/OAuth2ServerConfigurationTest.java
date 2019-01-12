@@ -39,14 +39,17 @@ public class OAuth2ServerConfigurationTest {
     public void testGetAccessTokenAsOfficer() throws Exception {
 
         userService.createOfficer(Users.OFFICER_EMAIL, Users.OFFICER_PASSWORD);
+
         String clientId = "test-client-id";
         String clientSecret = "test-client-secret";
+
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("grant_type", "password");
         params.add("client_id", clientId);
         params.add("client_secret", clientSecret);
         params.add("username", Users.OFFICER_EMAIL);
         params.add("password", Users.OFFICER_PASSWORD);
+
         mvc.perform(post("/oauth/token")
                 .params(params)
                 .with(httpBasic(clientId, clientSecret))
@@ -61,4 +64,5 @@ public class OAuth2ServerConfigurationTest {
                 .andExpect(jsonPath("scope").value("mobile_app"))
         ;
     }
+
 }

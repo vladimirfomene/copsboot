@@ -42,6 +42,10 @@ public class Users {
                 PASSWORD_ENCODER.encode("user"));
     }
 
+    public static User newOfficer(String email, String password) {
+        return User.createOfficer(newRandomId(), email, PASSWORD_ENCODER.encode(password));
+    }
+
     public static User officer() {
         return OFFICER;
     }

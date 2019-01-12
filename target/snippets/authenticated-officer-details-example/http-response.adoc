@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Length: 113
+
+{
+  "id" : "8feff0e1-a8fa-46e4-907c-75ceff237b6a",
+  "email" : "officer@example.com",
+  "roles" : [ "OFFICER" ]
+}
+----

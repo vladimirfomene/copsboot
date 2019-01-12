@@ -1,0 +1,36 @@
+== User Management
+=== User information
+The API allows to get information on the currently logged on user
+via a `GET` on `/api/users/me`. If you are not a logged on user, the
+following response will be returned:
+
+.HTTP request
+include::{snippets}/own-user-details-when-not-logged-in-example/http-request.adoc[]
+
+.HTTP response
+include::{snippets}/own-user-details-when-not-logged-in-example/http-response.adoc[]
+
+If you do log on as a user, you get more information on that user:
+.HTTP REQUEST
+include::{snippets}/authenticated-officer-details-example/http-request.adoc[]
+
+.HTTP RESPONSE
+include::{snippets}/authenticated-officer-details-example/http-response.adoc[]
+
+.RESPONSE FIELDS
+include::{snippets}/authenticated-officer-details-example/response-fields.adoc[]
+
+=== Create a user
+To create a new user, do a `POST` on `/api/users`:
+
+.HTTP REQUEST
+include::{snippets}/create-officer-example/http-request.adoc[]
+
+.REQUEST FIELDS
+include::{snippets}/create-officer-example/request-fields.adoc[]
+
+.HTTP RESPONSE
+include::{snippets}/create-officer-example/http-response.adoc[]
+
+.RESPONSE FIELDS
+include::{snippets}/create-officer-example/response-fields.adoc[]

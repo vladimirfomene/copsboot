@@ -1,0 +1,7 @@
+[source,options="nowrap"]
+----
+{
+  "email" : "wim.deblauwe@example.com",
+  "password" : "my-super-secret-pwd"
+}
+----
